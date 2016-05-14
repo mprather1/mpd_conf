@@ -1,6 +1,9 @@
 sudo apt-get update
 sudo apt-get install -y mpd mpc
 
+echo "Enter music directory: "
+read music_dir
+
 printf "# An example configuration file for MPD.
 # Read the user manual for documentation: http://www.musicpd.org/doc/user/
 # or /usr/share/doc/mpd/user-manual.html
@@ -8,7 +11,7 @@ printf "# An example configuration file for MPD.
 
 # Files and directories #######################################################
 
-music_directory		'${1}'
+music_directory		'${music_dir}'
 
 playlist_directory		'/home/${user}/mpd/playlists'
 
@@ -21,7 +24,7 @@ pid_file			'/home/${user}/mpd/pid'
 state_file			'/home/${user}/mpd/state'
 
 sticker_file  '/home/${user}/mpd/sticker.sql'
-#
+
 ###############################################################################
 
 
@@ -384,3 +387,7 @@ id3v1_encoding			'UTF-8'
 ###############################################################################
 
 " | sudo tee /etc/mpd.conf
+
+echo "
+All done!!"
+echo "Go fuck yourself!!"
