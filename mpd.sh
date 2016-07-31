@@ -47,7 +47,7 @@ sticker_file                   \"//home/${user}//mpd/sticker.sql\"
 # initialization. This setting is disabled by default and MPD is run as the
 # current user.
 #
-user				\"mpd\"
+user				\"${user}\"
 #
 # This setting specifies the group that MPD will run as. If not specified
 # primary group of user specified with \"user\" setting will be used (if set).
@@ -408,7 +408,6 @@ id3v1_encoding			\"UTF-8\"
 #}
 #
 ###############################################################################
-
 " | sudo tee /etc/mpd.conf
 
 echo "
