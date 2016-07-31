@@ -1,7 +1,9 @@
 sudo apt-get update
 sudo apt-get install -y mpd mpc
 
-echo "Enter music directory: "
+echo "Enter mpd user..."
+read user
+echo "Enter music directory..."
 read music_dir
 
 printf "# An example configuration file for MPD.
