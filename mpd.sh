@@ -7,7 +7,7 @@ echo "Enter music directory..."
 read -e music_dir
 
 mpdFiles=(mpd/tag_cache mpd.log pid state sticker.sql)
-mpdFolders(mpd/playlists mpd/music)
+mpdFolders=(mpd/playlists mpd/music)
 
 for mpdfile in "${mpdFiles[@]}"; do
   touch /home/$user/$mpdfile
