@@ -1,6 +1,3 @@
-sudo apt-get update
-sudo apt-get install -y mpd mpc
-
 echo "Enter mpd user..."
 read -e user
 echo "Enter music directory..."
@@ -8,6 +5,8 @@ read -e music_dir
 
 mpdFiles=(mpd/tag_cache mpd.log pid state sticker.sql)
 mpdFolders=(mpd/playlists mpd/music)
+
+mkdir /home/$user/mpd
 
 for mpdfile in "${mpdFiles[@]}"; do
   touch /home/$user/$mpdfile
